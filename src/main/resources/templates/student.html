@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+<table width="600px">
+    <tr>
+        <td align="center">编号</td>
+        <td align="center">姓名</td>
+        <td align="center">年龄</td>
+        <td align="center">性别</td>
+        <td align="center">地址</td>
+        <td align="center">年级</td>
+    </tr>
+    <tr th:each="student:${students}">
+        <td th:text="${student.id}" align="center"></td>
+        <td th:text="${student.studentName}" align="center"></td>
+        <td th:text="${student.age}" align="center"></td>
+        <td th:text="${student.sex}" align="center"></td>
+        <td th:text="${student.addr}" align="center"></td>
+        <td th:text="${student.gradeId}" align="center"></td>
+    </tr>
+</table>
+</body>
+</html>
